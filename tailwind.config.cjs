@@ -16,6 +16,10 @@ module.exports = {
         },
         pink: {
           100: '#FF29DC'
+        },
+        purple:{
+          300: '#500b8c',
+          500: '#1f0238'
         }
       },
       fontFamily: {
