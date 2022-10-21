@@ -1,9 +1,9 @@
 function App() {
   return (
     <div className="h-screen bg-[url('/bg.png')] bg-no-repeat bg-cover flex items-center justify-center ">
-      <div className="flex justify-center w-2/3 h-3/4  pt-6 rounded-[48px] bg-gradient-to-b from-purple-300 to-purple-500">
+      <div className="flex justify-center w-[768px] py-6 rounded-[48px] bg-gradient-to-b from-purple-300 to-purple-500">
         <form className="flex flex-col space-y-6 items-end">
-          <img src="/logo.png" alt="Logo DevFire" />
+          <img src="/logo.png" alt="Logo DevFire" className="h-[200px] xl:h-[220px]" />
 
           <div className="flex space-x-4 w-full justify-end w-480 ">
             <label
