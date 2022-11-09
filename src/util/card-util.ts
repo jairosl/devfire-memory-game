@@ -1,9 +1,9 @@
-//duplica os cards e mistura
-
 import { ICard } from "../components/card";
 import { cards } from "../data/cards";
 
-export const shuffleArray = (firstArr: any[], secondArr: any[]): ICard[]=>{
+//duplica os cards e mistura
+
+export const shuffleArray = (firstArr: ICard[], secondArr: ICard[]): ICard[]=>{
   return [...firstArr, ...secondArr].sort(()=> Math.random() -0.5);
 }
 
@@ -22,5 +22,3 @@ export const regenerateCard = (cards: ICard[]): ICard[] => {
   return shuffleArray([...cards.map((card) => ({ ...card, id: keyGen() }))],
   cards.map((card) => ({ ...card, id: keyGen() })));
 };
-
-console.log(regenerateCard(cards));

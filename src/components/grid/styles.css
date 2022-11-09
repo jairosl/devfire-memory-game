@@ -1,0 +1,7 @@
+.grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+}

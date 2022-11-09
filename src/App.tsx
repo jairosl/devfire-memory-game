@@ -1,5 +1,12 @@
+import { Card } from "./components/card"
+import { Grid } from "./components/grid";
+import { cards } from "./data/cards";
+
+const handleClick = (id: string) => {
+  console.log(id);
+}
 function App() {
-  return (
+  return(
     <div className="h-screen bg-[url('/bg.png')] bg-no-repeat bg-cover flex items-center justify-center ">
       <div className="flex justify-center w-2/3 h-3/4  pt-6 rounded-[48px] bg-gradient-to-b from-purple-300 to-purple-500">
         <form className="flex flex-col space-y-6 items-end">
@@ -49,5 +56,8 @@ function App() {
     </div>
   )
 }
-
 export default App
+
+/*
+
+*/
