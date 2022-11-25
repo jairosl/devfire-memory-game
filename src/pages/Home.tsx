@@ -1,14 +1,14 @@
-import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { usePlay } from "../hooks/play"
 
 export function Home() {
-  const [nickPlayerOne, setNickPlayerOne] = useState("")
-  const [nickPlayerTwo, setNickPlayerTwo] = useState("")
+  const { changeNamePlayerOne, changeNamePlayerTwo, nicknamePlayerOne, nicknamePlayerTwo } =
+    usePlay()
   const navigation = useNavigate()
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (nickPlayerOne === "" || nickPlayerTwo === "") {
+    if (nicknamePlayerOne === "" || nicknamePlayerTwo === "") {
       alert("empty nickname")
       return
     }
@@ -32,8 +32,8 @@ export function Home() {
               id="playOne"
               type="text"
               maxLength={10}
-              value={nickPlayerOne}
-              onChange={(e) => setNickPlayerOne(e.target.value)}
+              value={nicknamePlayerOne}
+              onChange={(e) => changeNamePlayerOne(e.target.value)}
               className="rounded-full px-5 font-pixel text-4xl bg-yellow-100 shadow-inset"
               autoComplete="off"
             ></input>
@@ -50,8 +50,8 @@ export function Home() {
               id="playTwo"
               type="text"
               maxLength={10}
-              value={nickPlayerTwo}
-              onChange={(e) => setNickPlayerTwo(e.target.value)}
+              value={nicknamePlayerTwo}
+              onChange={(e) => changeNamePlayerTwo(e.target.value)}
               className="rounded-full px-5 font-pixel text-4xl bg-yellow-100 shadow-inset"
               autoComplete="off"
             ></input>
