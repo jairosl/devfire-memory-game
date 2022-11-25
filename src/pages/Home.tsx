@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { usePlay } from "../hooks/play"
+import { usePlay } from "../contexts/play"
 
 export function Home() {
   const { changeNamePlayerOne, changeNamePlayerTwo, nicknamePlayerOne, nicknamePlayerTwo } =
