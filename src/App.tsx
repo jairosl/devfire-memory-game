@@ -1,53 +1,15 @@
-function App() {
+import { Route, Routes } from "react-router-dom"
+import { Providers } from "./contexts"
+import { Home } from "./pages/Home"
+import { Start } from "./pages/Start"
+
+export function App() {
   return (
-    <div className="h-screen bg-[url('/bg.png')] bg-no-repeat bg-cover flex items-center justify-center ">
-      <div className="flex justify-center w-[768px] py-6 rounded-[48px] bg-gradient-to-b from-purple-300 to-purple-500">
-        <form className="flex flex-col space-y-6 items-end">
-          <img src="/logo.png" alt="Logo DevFire" className="h-[200px] xl:h-[220px]" />
-
-          <div className="flex space-x-4 w-full justify-end w-480 ">
-            <label
-              htmlFor="playOne"
-              className="font-pixel text-shadow text-red-black text-6xl uppercase text-stroke font-bold"
-            >
-              p1
-            </label>
-            <input
-              id="playOne"
-              type="text"
-              maxLength={10}
-              className="rounded-full px-5 font-pixel text-4xl bg-yellow-100 shadow-inset"
-              autoComplete="off"
-            ></input>
-          </div>
-
-          <div className="flex space-x-4 w-full justify-end">
-            <label
-              htmlFor="playTwo"
-              className="font-pixel text-shadow text-blue-black text-6xl uppercase text-stroke font-bold"
-            >
-              p2
-            </label>
-            <input
-              id="playTwo"
-              type="text"
-              maxLength={10}
-              className="rounded-full px-5 font-pixel text-4xl bg-yellow-100 shadow-inset"
-              autoComplete="off"
-            ></input>
-          </div>
-          <div className="flex items-center justify-center w-full">
-            <button
-              type="submit"
-              className="bg-pink-100 text-white font-pixel text-5xl px-12 py-3 rounded-full shadow-2xl uppercase"
-            >
-              play
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+    <Providers>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/start" element={<Start />} />
+      </Routes>
+    </Providers>
   )
 }
-
-export default App
